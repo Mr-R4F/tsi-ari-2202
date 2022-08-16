@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Formulário</legend>
+                    <label for="nm">Nome</label>
+                    <input type="text" name="nome" id="nm" placeholder="Digite seu nome" required maxlength="50" autofocus>
+    
+                    <label for="em">E-mail</label>
+                    <input type="email" name="email" id="em" placeholder="Digite seu e-mail" required autocomplete="off">
+    
+                    <label for="data">Data</label>
+                    <input type="date" name="nasc" id="data" required>
+    
+                    <label for="pg">Página</label>
+                    <input type="url" name="pag" id="pg" placeholder="Digite sua url" required>
+    
+                    <label for="tl">Tel.:</label>
+                    <input type="tel" name="tel" id="tl" required placeholder="Digite seu telefone" maxlength="11">
+    
+                    <label for="end">Endereço</label>
+                    <input type="text" name="end" id="end" placeholder="Digite seu endereço" required>
+    
+                    <label for="br">Bairro</label>
+                    <input type="text" name="br" id="br" placeholder="Digite seu bairro" required>
+    
+                    <label for="Estado">Selecione seu estado</label>
+                    <input list="Estado" name="est" id="est" required>
+    
+                    <datalist id="Estado">
+                        <option value="RJ">
+                        <option value="MG">
+                        <option value="SP">
+                        <option value="ES">
+                        <option value="RS">
+                    </datalist>
+    
+                    <label for="nv">Qual o seu navegador preferido</label>
+                    <select name="nav" id="nv" multiple required><br>
+                        <option value="Edge">Edge</option>
+                        <option value="Chrome">Chrome</option>
+                        <opion value="Opera">Opera</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Safari">Safari</option>
+                    </select>
+    
+                    <label for="txt">Deixe seu comentário</label>
+                    <textarea name="com" id="txt" cols="30" rows="10" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
