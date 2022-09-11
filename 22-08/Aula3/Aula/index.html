@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <form action="" method="post">
+                <div class="block">
+                    <label for="nm">Nome</label>
+                    <input type="text" name="nome" id="nm" required autocomplete="off" maxlength="50" minlength="20">
+                </div>
+                <div class="block">
+                    <label for="em">Email</label>
+                    <input type="email" name="email" id="em" required autocomplete="off" maxlength="50" minlength="7">
+                </div>
+                <div class="block">
+                    <label for="dt">Data de Nasc.:</label>
+                    <input type="date" name="data" id="dt">
+                </div>
+                <div class="block">
+                    <label for="url">Pág. pessoal</label>
+                    <input type="url" name="url" id="url">
+                </div>
+                <div class="block">
+                    <label for="fone">Telefone</label>
+                    <input type="tel" name="fone" id="fn" required autocomplete="off" pattern="()">
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>

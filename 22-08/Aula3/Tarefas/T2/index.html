@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="audio-content">
+                <audio src=""></audio>
+                <div class="audio-controls">
+                    <!-- play / stop -->
+                    <span id="play">
+                        <img src="assets/play.png" alt="" width="34">
+                    </span>
+
+                    <span class="time-area">
+                        <span id="initial-time">
+                            <span id="current-min">0</span>
+                            <span class="dots">:</span>
+                            <span id="current-sec">00</span>
+                        </span>
+                        <span id="bar"> / </span>
+                        <span id="total-time"> 
+                            <span id="total-min">--</span>
+                            <span class="dots">:</span>
+                            <span id="total-sec">--</span>
+                        </span>
+                    </span>
+                    
+                    <div class="progress-bar">
+                        <meter value="0" min="0" max="100" id="meter">0%</meter>
+                    </div>
+
+                    <span id="vol-area">
+                        <span id="vol">
+                            <img src="assets/VolOn.png" alt="" width="34" id="volImage">
+                        </span>
+                        <span id="vol-content">
+                            <input type="range" id="vol-bar" value="50">
+                        </span>
+                    </span>
+
+                    <span id="config">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512" width="26" height="26" fill="white"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M64 360c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zm0-160c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zM120 96c0 30.9-25.1 56-56 56S8 126.9 8 96S33.1 40 64 40s56 25.1 56 56z"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

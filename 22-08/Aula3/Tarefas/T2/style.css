@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    zoom: 150%;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+.container, .audio-controls {
+    display: flex;
+}
+
+#vol-area {
+    display: inline-flex;
+}
+
+.container {
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.audio-controls {
+    justify-content: space-between;
+    background-color: #acacac;
+    box-shadow: 2px 2px 40px -11px rgba(0,0,0,0.75);
+    border-radius: 25px;
+    padding: 7px;
+}
+
+.audio-controls, #vol-area {
+    align-items: center;
+}
+
+.audio-content {
+    width: 500px;
+}
+
+meter {
+    width: 80px;
+    height: 10px;
+    margin-bottom: .2em;
+}
+
+meter::-webkit-meter-bar {
+    border-radius: 0;
+    border: none;
+}
+
+meter::-webkit-meter-optimum-value {
+    background-color: #272727;
+}
+
+img {
+    cursor: pointer;
+}
+
+#vol-content {
+    display: none;
+    padding-left: 5px;
+}
+
+input[type=range] {
+    width: 60px;
+    height: 5px;
+}
