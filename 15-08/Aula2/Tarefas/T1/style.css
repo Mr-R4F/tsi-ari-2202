@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    background-color:aliceblue;
+    box-shadow: 10px 10px 15px black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+legend{
+    text-align: center;
+}
+
+input, textarea, select{
+    margin-bottom: 15px;
+}
+
+input {
+    height: 27px;
+
+}
+
+button {
+    cursor: pointer;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+}
