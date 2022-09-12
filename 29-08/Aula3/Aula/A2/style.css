@@ -1,0 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: xx-large;
+}

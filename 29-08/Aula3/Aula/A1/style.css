@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.arrastavel {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+
+#area-de-arraste {
+    width: 100px;
+    min-height: 100px;
+    padding: 20px;
+    background-color: chartreuse;
+}
