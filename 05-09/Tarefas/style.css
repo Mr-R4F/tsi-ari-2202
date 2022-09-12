@@ -6,6 +6,45 @@
 
 .container {
     display: flex;
+}
+
+.container {
     justify-content: center;
     margin-top: 10%;
 }
+
+#pokedex {
+    width: 400px;
+    height: 600px;
+    padding: 15px;
+    background-color: rgb(255, 39, 39);
+    border-block: 7px solid #000;
+}
+
+/* Botões */
+#right-col .bar {
+   background-color: #272727;
+   border-radius: 5px;
+}
+
+#right-col .bar:first-child {
+    width: 30px;
+    height: 100px;
+}
+
+#right-col .bar:nth-child(2){
+    position: relative;
+    width: 100px;
+    height: 30px;
+    bottom: 4.15em;
+    right: 2.15em;
+}
+
+#right-col .three .circle {
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 35px;
+}
+
+
