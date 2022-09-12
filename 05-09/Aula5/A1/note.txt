@@ -1,0 +1,46 @@
+/*
+AJAX -javascript assincrono
+Antigamente -> web estática (tinha comunicação, mais ia para outra rota para prosseguir na jornada)]
+Com o AJAX permitiu ser assincrona (faz a chamada(requisição) e o server retorna na mesma página)
+Manda p/ o serve que recebe a resposta
+GET e POST
+AJAX atualiza páginas assíncronamente (não há necessidade de recarregar páginas)
+facebook, gmail etc ....
+facilitou no uso de vários outros frameworks JS
+Retorna os dados sem a necessidade de carregar a página
+tudo em HTTP
+
+Utiliza JS, XML, obj XMLHttpRequest (objeto do js e nativo do navegador, é só instancia)
+(req. enviada no servidor)
+
+instancia (cria uma cópia)
+métodos
+open() - abre a req. (fornece os dados)
+send() - envia a req.
+setRequestHeader() - espera os dados que vão vir
+
+open - recebe 3 argumentos (métodos, url (endereço do que vai abrir), se a chamada é assincrona ou não(padrão é))
+send - 1 arg opcional post
+setRequest - dois parametros - nome do cabeçalho e val do cabeçalho (ou tipo)
+
+get - recebe dados - autenticar no cabeçalho
+post - envia dados
+
+recebe resposta - readyStateChange
+necessários 'escutar' o evento e toda vez que muda, verificar qual o status dele
+
+estados - 0 a 5; (readyState)
+
+status - 200 -ok / 404 - not found / 500 - serve error
+
+status 200, a resposta pode ser obtida pelas propriedades responseText ou XML
+
+progress
+normalmente é necessário um servidor por causa do bloquei cross( não pode enviar req. para um local se tiver bloqueado para receber)
+É NECESSÁRIO ENDEREÇO PARA ENVIAR COM AJAX
+
+json - object js notation - forma fácil de estrutura dados é possível formatar
+com isso é possível obter vários dados
+*/
+
+//Fazer pokedex usando o AJAX (fazer requisições)
