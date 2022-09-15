@@ -1,10 +1,15 @@
+:root {
+    --length: 10px;
+    --black: #000;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.container {
+.container, #line-left {
     display: flex;
 }
 
@@ -14,14 +19,101 @@
 }
 
 #pokedex {
-    width: 400px;
+    width: 430px;
     height: 600px;
-    padding: 15px;
+    border-radius: 10px;
     background-color: rgb(255, 39, 39);
-    border-block: 7px solid #000;
+    box-shadow: 0px 0px 0 3px var(--black) inset;
+    /* border-block: 7px solid #000; */
 }
 
-/* Botões */
+
+/* row 1 */
+#line-left, #line-middle, #line-right {
+    background-color: gray;
+    position: relative;
+}
+
+#line-left {
+    padding: 18px 15px;
+    height: 20px;
+    z-index: 1;
+    border-top-left-radius: var(--length);
+    border-top-right-radius: var(--length);
+}
+
+#line-middle {
+    height: 80px;
+    width: 180px;
+    border-bottom-right-radius: var(--length);
+    border-bottom: 3px solid;
+}
+
+#line-right {
+    height: 150px;
+    width: 120px;
+    bottom: 9.5em;
+    left: 11em;
+    clip-path: polygon(0 45%, 0% 100%, 100% 45%);
+    background-color: var(--black);
+}
+
+#polygon {
+    position: absolute;
+    top: 0em;
+    height: 147.5px;
+    width: 119.25px;
+    background-color: rgb(255, 39, 39);
+    clip-path: polygon(0 45%, 0% 100%, 100% 45%);
+}
+
+#line-left .circle-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 55px;
+    background-color: #fff;
+}
+
+.circle-large .circle-med {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 55px;
+    background-color: #71cbff;
+    top: .3em;
+    left: .3em;
+}
+
+#line-left .circle-small {
+    width: 20px;
+    height: 20px;
+    border-radius: 35px;
+    margin: 0 var(--length);
+}
+
+#line-left .circle-small:nth-child(2) {
+    background-color: #ff0000;
+}
+
+#line-left .circle-small:nth-child(3) {
+    background-color: #ffff00;
+}
+
+#line-left .circle-small:nth-child(4) {
+    background-color: #00ff00;
+}
+
+#line-left .circle-small .circle-tiny {
+    width: var(--length);
+    height: var(--length);
+    border-radius: 35px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.235);
+    left: .2em;
+    top: .2em;
+}
+
+/*
 #right-col .bar {
    background-color: #272727;
    border-radius: 5px;
@@ -46,5 +138,4 @@
     height: 10px;
     border-radius: 35px;
 }
-
-
+*/
