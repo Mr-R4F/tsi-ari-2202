@@ -241,6 +241,7 @@ body {
     height: 40px;
     border-radius: 35px;
     background-color: var(--black2);
+    border: 1px solid #000;
 }
 
 #right-col .three .col:first-child {
@@ -273,8 +274,8 @@ body {
 }
 
 #right-col img {
-    width: 100%;
-    margin-top: -25%;
+    width: 148px;
+    margin: 0 18%;
 }
 
 /* SCROLL BAR */
