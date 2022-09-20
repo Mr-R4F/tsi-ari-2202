@@ -13,6 +13,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container, #line-left, 
@@ -232,12 +233,49 @@ body {
 }
 
 #right-col .three .screen {
-    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    text-align: center;
+    width: 185px;
     height: 100px;
     border-radius: 6px;
     margin-top: 15%;
     background-color: #53b753;
     border: 3px solid;
+    padding: 8px;
+    overflow: scroll;
+}
+
+#right-col .three #pokemon-id,
+#right-col .three #pokemon-name {
+    display: flex;
+    flex-direction: column;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-button {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: none;
+}
+
+::-webkit-scrollbar-track {
+    width: 5px;
+    height: 5px;
+    background-color: #3e3e3e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dcdcdc;
 }
 
 #right-col .three .line {
@@ -468,4 +506,9 @@ body {
     height: 45px;
     border-radius: 5px;
     background-color: var(--black2);
+}
+
+#right-col img {
+    width: 100%;
+    margin-top: -25%;
 }
