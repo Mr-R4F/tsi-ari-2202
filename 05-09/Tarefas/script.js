@@ -79,7 +79,7 @@ function showPokemons(id) {
     }
 }
 
-for (let id = 1; id <= 905; id++) {
-    XHTTP.open('GET', `https://pokeapi.co/api/v2/pokemon?limit=905`, true);
+for (let id = 1; id <= 151; id++) {
+    XHTTP.open('GET', `https://pokeapi.co/api/v2/pokemon?limit=151`, true);
     XHTTP.send();
 }
