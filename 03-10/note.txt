@@ -1,0 +1,140 @@
+Formata a informação do HTML (css visualização)
+comportamentos e visuais no HTML
+
+seletores -> identificações das tags (formas de selecionar elementos HTML e atribuir atributos neles
+
+mais especifico mais prioritário
+
+mais especifico
+
+folha em cascata -> sobrecrever estilos
+antes era comum arquvos para sobre escrever o css
+
+a que vem de baixo pra cima tem prioridade
+a última add tem prioridade
+
+a última pg add tem priorirade
+o css deve sobreescrever (colocar por pultimo para ter mais relevancia)
+
+aboliu o uso de degradê de fundo
+troue animação , bordas sombras e efeito de animação
+
+o 2.1 tinha coisas + estáticas
+o css3 trouxe coisas dinâmicas que facilita o comportamento
+seletores complexos
+
+é possivel selecionar elements que tenha atributos no css
+por atributo elemento[atr]
+
+seleção de elementos por condição
+
+nthchild - seleciona um elemento na posição N
+
+gradientes ->  elementos com cor de fundo onde faz um transição gradual
+define tamanho / direção
+back image
+
+texto definido em colunas
+
+define um texto que ocupe X colunas (tal texto divida em tantas colunas automaticamente)
+
+p/ artigos academicos geralmente
+column - gap define tamnha/espaçamento entre as colunas
+column-rule-style -: colunas definidos por linhas
+column-rule-width -> espesura da linha
+column-rule-color -> define cor da linha
+
+transform manipula o elemento na tela
+maniupla o elemento em 4 PROPRIEDADES
+escalar, distorcer, modificar.
+scale -> modifica a dimensão do elemento (proporcional)
+skew (distorsão) -> modifica ângulos do elementos em graus
+translate -> move o elemento pelos eixos X / Y.
+rotate -> rotaciona através de ângulos
+
+transição permite criar animações de um ponto a outro
+cria transição entre estados de um elemento
+muda as propriedades de um elemento CSS de forma suave.
+a partir de uma propriedade escuta o elemento e fica fazedo mudança
+
+tempos de transição (transicion-time-function) manipula tempo
+
+linear -> constante
+ease -> fica rapido e devagar
+cubic bezier uma função que define 4 pontos (determina a curva , a relação da animaçãao
+)
+
+transição muda a propriedade com base em uma condição
+animação define o comportamento indepedente da condição
+
+necessário declarar
+
+@keyframe -> declara animação (pontos especificos na animação) (quadros da animação) (podem se repetir ou acontecer de uma única vez)
+- define o nome da animação _. dentro colocar  duas propriedades 'from' -> (Estado inicial)(chaves) 'to' -> (quadro final)(chaves)
+faz interpolação (animação) ->(cria vários estado intermediários até chegar no final)
+quadros chaves de uma animação
+criar a animação e atribuir a algum elemento
+
+animation-duration- >tempo da animação
+
+é possível combinar com os elementos CSS
+
+sobre escrita
+
+animation-delay -> define atraso (em segundos) p/ a animação começar.
+animatin-interator-count -> define quantas vezes a animação vai rodar
+animation-direction -> direção da animação em relação aos quadros (padrão sempre para frente (forward)) 
+-: forward, reverse, normal, alternate (loop), 'reverse (começa do final e vai para o começo)
+
+é possível definir quadros em % (0 a 100).
+é possivel colocar estados intermediários entre eles valores de 0 a 100.
+
+bordas arredondadas - define em px a curvatura da bordas
+em % ocupar como se fosse uma área cada borda.
+
+sombras
+text/box shadow - hor, vert -> o quão distante é a projeção da sombra
+pode definir a espessura (difusa ou não)
+pode-se combinar text/box shadows
+text - no texto
+box - no elemento
+mesma sintaxe **
+
+@font-face -> fontes customizadas no sintaxe
+
+@font-face {
+    nome da fonte customizadas
+    caminho do arq da font.
+}
+
+font que não é padrão baixa e declara
+
+tentar baixar a fonte e deixar no arv do projeto
+
+@media query -> basea-se na tela de um dispositivo (cria CSS condicional)
+permite CSS condiciona, isto é a partir de atributos é possível colocar propriedades CSS (viewport, largura, tamanho, orientação, resolução)
+
+faixa - tam de tela até tal largura
+max-width -> passou disso ignora (até determinado tamanho)
+min-width -> a partir da resolução (faixa intermedia (especifica))
+são inclusivos
+
+o arquivo -> por estar embaixo tem prioridade 
+
+flexbox -> permite criar design responsivo de forma fácil
+depende de um container que é flexbox
+
+a tendendcia são caixas que posuem comportamentos diferentes baseados no tamanho da tela
+faz de uma forma rápida os elementos, e como ficam dispostos com poucas propriedades e seguindo a tendencia dos dispositivos
+
+*******APENAS o pai/mãe dos elementos serão flex.
+padrão é um do lado do outro
+
+é possível definir o comportamento dos elementos
+flex-direction - direção que os itens serão empilhados (row padrão) (column - em cima do outro)
+flex-wrap - se os elementos se acomodam na mesma área ou não (se adaptem)
+justify-content (horizontal)
+align-items (vertical) (necessário especificar o TAMANHO)
+
+
+o flex alinha os elementos na horizontal e vertical

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        input[type=number]{
+            background-color: red;
+        }
+
+        li:last-child {
+            background-image: linear-gradient(yellow, red);/*transição de uma cor
+        }
+
+        body {
+            background-image: linear-gradient(yellow 20%, red);
+        }
+
+        p {
+            column-count: 3;
+            column-gap: 10px;
+            column-rule-style: solid;
+            column-rule-width: 10px;
+            column-rule-color: blue;
+        }
+        
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transform: scale(1.5); /* Multiplica / escala (fica 50% maior nesse caso
+            transform: translateX(30px);
+            transform: rotate(45deg);
+        }
+        
+
+        div {
+            width: 200px;
+            height: 200px;
+            transition: width 2s;
+            transition-timing-function: ease;
+            background-color: blue;
+        }
+
+        div:hover {
+            width: 500px;
+        }
+        
+
+        @keyframes trocaCor {
+            from {
+                background-color: green;
+            }
+
+            to {
+                background-color: yellow;
+                transform: scale(2);
+            }
+        }
+        
+
+        @keyframes trocaCor {
+            0% {
+                background-color: green;
+            }
+
+            33% {
+                background-color: red;
+            }
+
+            66% {
+                background-color: purple;
+            }
+
+            100% {
+                background-color: yellow;
+                transform: scale(2);
+            }
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            animation-name: trocaCor;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        */
+        /*
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 5px 5px blue, 5px 5px red, 5px 5px green;
+            
+        }
+
+        p {
+            text-shadow: 1px 2px 5px #000, 1px 2px 5px blue;
+        }
+        
+
+        div { senão entra aqui 
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        @media screen and (max-width: 400px) {  ocupa tudo 
+           div {
+                width: 100%;
+           }
+        }
+
+        @media screen and (min-width: 401px) and (max-width: 900px) { ocupa a depender da faixa 
+           div {
+                width: 70%;
+           }
+        }
+
+        */
+
+        .caixinha {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .pai {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 400px) {
+            .pai {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+   <!--  <input type="text" name="" id="" required>
+    <input type="number" name="" id="" value="50">
+    <ul>
+        <li>txt</li>
+        <li>txt</li>
+        <li>txt</li>
+    </ul>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Veritatis iure, dolor quos blanditiis ad, eius reiciendis, 
+        omnis consequatur earum quia ratione ab velit eos ea eaque. 
+        Quod cumque odio eveniet?
+    </p> -->
+    <!-- <div></div> -->
+    <!-- <p>342432</p> -->
+    <div class="pai">
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+        <div class="caixinha"></div>
+    </div>
+</body>
+</html>
