@@ -1,0 +1,51 @@
+se tiver propriedade 'nome-da-propriedade' in ...
+
+getCurrent position - obtém a localização do usuario / usar callbacks (assincrona)
+
+necessário passar duas callbacks (sucesso e erro) (função qu e é chamada quando se tem uma função assincrona)
+
+sucesso recebe um parametro position
+
+possui objeto coords, qye contem os valores lagitude e longitude e accurancy
+
+se der erro 
+
+caso n permite 1 - permissão negada
+2 _ indisponivel
+3 - timeout (tempo em excesso)
+
+opções enableHighAccurancy (padrão - false) consome muita banda / processamento
+
+timeout - tempo em milisegundos que ele vai fazer a solicitação
+maximumAge por quanto tempo o navegador pode usar a geolocalização obtidade e armazenda em cache
+
+é necessário criar objetos
+
+
+timestamp - tempo que se pegou a localização
+
+lagitude e latitude
+
+pode ter localização continua
+
+fica constantemente a mudando de localização de acordo c/ a posição do usuário (rastreio)
+
+watchPosition() - mesmo parametros (sucesso, erro, objeto não qual pode-se mudar atributos e configurações) (exenga a localização do usuário)
+
+triangularização - fica mudando
+
+a depender do uso, um em específico será usado
+
+Distancia entre posições
+
+é possivel definir a Distancia entre duas posiçoes por coordenadas
+
+API LatLon
+
+é possívl colocar no MAPS
+
+pode usar do bing
+
+ponto latitude e longitude
+
+? parametrods

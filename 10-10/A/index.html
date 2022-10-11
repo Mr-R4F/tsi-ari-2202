@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if ('geolocation' in navigator) { //se o navegador tem implementado
+                navigator.geolocation.getCurrentPosition(function(position) { //deu sucesso cai aqui e passa a var position
+                let latitude = position.coords.latitude;
+                let longitude = position.coords.longitude;
+
+                console.log(`http://dev.virtualearth.net/REST/v1/Locations/${latitude},${longitude}?key=AnsdrXCKWxMLKUhKYwT0gSS7DvrGCYZAE6Dp_zkOtuYOw2LDpIYD8Ge4Obd1rHIA`)
+                let xhttp = new XMLHttpRequest();
+                xhttp.open('GET', `http://dev.virtualearth.net/REST/v1/Locations/${latitude},${longitude}?key=AnsdrXCKWxMLKUhKYwT0gSS7DvrGCYZAE6Dp_zkOtuYOw2LDpIYD8Ge4Obd1rHIA`);
+                xhttp.onreadystatechange = () => {
+                    if (xhttp.status == 200 && xhttp.readyState == 4) {
+                        console.log('response', xhttp.responseText);
+                    }
+
+                    let resp = JSON.parse(xhttp.responseText);
+                    console.log('resp', resp.resourceSets[0].resources[0].name);
+                }
+
+                xhttp.send();
+                console.log('position', position); //checa se tem geolocalização e cai aqui para ver quais dados de localização tem
+            }), function(error) { //a segunda se não conseguiu obter os dados do usuários
+                console.log('error', error); //se usuário NÃO permitir o ocorrer algum error
+            }; //obtém a localização do usuário (assincrona e algum momento ela retorna, callbacks) (passa funções como parâmetros) (passa como refêrenciaA) (função anonima função que não tem nome)
+        } else {
+            alert('Não tem geolocalização')
+        }   
+    </script>
+</body>
+</html>
