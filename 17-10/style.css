@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 20%;
+    zoom: 200%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}

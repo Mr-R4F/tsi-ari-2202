@@ -1,0 +1,25 @@
+Api de navegação - permite controlar o estado de histórico no navegador
+evita carregar várias páginas
+carrega o conteúdo na mesma página
+exp gmail
+
+===
+solução -> location -> permite alterar a URl da página possui a propriedade hash (~target ) passando um parâmetro
+passa um ID (conforme o hash muda ele interpreta como novos endereço e vai colocando em pilhas)
+contador ->
+hash -> passa infos relevantes e conta c/ infos novas (muda o estado da aplicação)
+//volta para o estado anterior
+
+//possui api para guardar dados mais complexos
+usar a API de histórico do navegador
+objeto history (obj)window)
+pilha / fila
+
+back -> volta p/ o anterior
+forward -: avança
+go - a partir de um indic, 'vai' p/ o estado de preferência
+pushState() -> empilha
+replaceState -: modifica o estado a partir de um indice
+state -> atraz o estado atual da pilha (propriedade)
+popstate -> acionada toda vez que saiu do estado anterior
+hash -> permite apenas um valor
