@@ -5,13 +5,31 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="style.css">
-        <title>Posição</title>
+        <title>GeoLocation</title>
     </head>
     <body>
         <div class="container">
-            <div id="adress"></div>
-            <div id="atualPosition"></div>
+            <div class="row">
+                <div class="col">
+                    <div class="item">
+                        <div id="map"></div>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <div class="item">
+                        <span class="text">Localização atual:</span>
+                        <span id="currentLocation"></span>
+                    </div>
+                    <div class="item">
+                        <span class="text">Distância:</span>
+                        <span id="distance"></span>
+                    </div>
+                </div>
+            </div>
         </div>
+       
+        <script src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AnsdrXCKWxMLKUhKYwT0gSS7DvrGCYZAE6Dp_zkOtuYOw2LDpIYD8Ge4Obd1rHIA" async></script>
         <script src="script.js" type="module"></script>
     </body>
 </html>

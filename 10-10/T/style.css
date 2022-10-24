@@ -1,0 +1,38 @@
+:root {
+    --center: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(227, 242, 255);
+}
+
+.container, .row, .item {
+    display: flex;
+}
+
+.container {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.item {
+    flex-direction: column;
+}
+
+.col {
+    padding: 0 10px;
+}
+
+#map {
+    position: relative;
+    width: 700px;
+    height: 500px;
+}
