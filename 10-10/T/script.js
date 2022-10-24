@@ -11,7 +11,7 @@ if ('geolocation' in navigator) {
 
         const POSITION1 = new LatLon(LATITUDE, LONGITUDE);
         const POSITION2 = new LatLon(-23.6757701, -46.7556246);
-        const POSITIONS_DISTANCE = POSITION1.distanceTo(POSITION2);
+        const POINTS_DISTANCE = POSITION1.distanceTo(POSITION2);
 
         const XHTTP = new XMLHttpRequest();
         XHTTP.open('GET', `http://dev.virtualearth.net/REST/v1/Locations/${LATITUDE},${LONGITUDE}?key=AnsdrXCKWxMLKUhKYwT0gSS7DvrGCYZAE6Dp_zkOtuYOw2LDpIYD8Ge4Obd1rHIA`);
@@ -19,13 +19,13 @@ if ('geolocation' in navigator) {
             if (XHTTP.status == 200 && XHTTP.readyState == 4) {
                 const RESP = JSON.parse(XHTTP.responseText);
                 CURRENT_LOCATION.textContent = RESP.resourceSets[0].resources[0].name;
-                CURRENT_DISTANCE.textContent = POSITIONS_DISTANCE.toFixed(1);
+                CURRENT_DISTANCE.textContent = POINTS_DISTANCE.toFixed(1);
                 GetMap(LATITUDE, LONGITUDE);
             }
         }
         XHTTP.send();
                 
-        function GetMap(lat, lon) {
+        function GetMap(lat, lon) { //Para gerar o mapa
             const POSITION = new Microsoft.Maps.Location(lat, lon);
             const INFO_OPTIONS = { 
                 title: "Informações de Localização", 
