@@ -1,0 +1,52 @@
+threads -> linhas  sequencia de algo
+contexto de execução
+contextos que podem ser divididas de formas paralelas (separadas)
+
+forma de colocar trabalhos de forma paralela num escopo de computação
+coisas de forma pararela (thread) -> tarefas complexas que podem travar a aplicação
+
+possui thread principal
+mais é possivel criar paralelas, mas deve voltar para a principar
+
+formas de colocar códigos de forma paralela
+
+em aplicações ricas ? serve para a execução de script complexos que podem travar a página (scripts pesados)
+colocar numa thread paralela para não 'pesar' a aplicação
+
+tudo de script é criado uma thread separada
+
+deixa a pág mais otimizada, mais rápida e resistente
+
+o js ainda roda numa thread só
+
+toda aplicação possui uma linha continua -> ou seja necessário uma atividade terminar para a outra ser executada
+por isso usar threads (joga o trabalho pesado em outra thread enquanto a aplicação roda na thread principal)
+
+para isso vem os web workers
+
+converte para string ia transformar p/ objetc (sempre converte para JSON) covnerte o valor para string
+
+função q renderiza a lsita a partir do local storage
+pega td de lista converte para string em sotrar
+
+guardar os estados conforme interage
+
+array de estadoss
+
+history state -> traz um 'objeto' atual 
+
+popstate -> qd o historico for atualizar mostra a lista
+pushstate add um novo estado
+assincrono necessário evento que mostra que o history
+
+html para  js -> postMessage()
+inverso - worker.postMessage()
+
+evenet message -> traz a message ( oque o worker estiver mandando exibir na tela)
+a comunicação retorna em forma de mensagens
+
+normalmente usa quando se quer fazer calculos, dados extensos,
+
+Forma de otimizar o código e deixa que o navegador separe nas threads
+
+
