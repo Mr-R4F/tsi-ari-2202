@@ -23,3 +23,18 @@ replaceState -: modifica o estado a partir de um indice
 state -> atraz o estado atual da pilha (propriedade)
 popstate -> acionada toda vez que saiu do estado anterior
 hash -> permite apenas um valor
+-----
+converte para string ia transformar p/ objetc (sempre converte para JSON) covnerte o valor para string
+
+função q renderiza a lsita a partir do local storage
+pega td de lista converte para string em sotrar
+
+guardar os estados conforme interage
+
+array de estadoss
+
+history state -> traz um 'objeto' atual 
+
+popstate -> qd o historico for atualizar mostra a lista
+pushstate add um novo estado
+assincrono necessário evento que mostra que o history
