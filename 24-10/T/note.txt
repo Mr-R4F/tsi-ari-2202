@@ -24,21 +24,6 @@ por isso usar threads (joga o trabalho pesado em outra thread enquanto a aplica�
 
 para isso vem os web workers
 
-converte para string ia transformar p/ objetc (sempre converte para JSON) covnerte o valor para string
-
-função q renderiza a lsita a partir do local storage
-pega td de lista converte para string em sotrar
-
-guardar os estados conforme interage
-
-array de estadoss
-
-history state -> traz um 'objeto' atual 
-
-popstate -> qd o historico for atualizar mostra a lista
-pushstate add um novo estado
-assincrono necessário evento que mostra que o history
-
 html para  js -> postMessage()
 inverso - worker.postMessage()
 
@@ -49,4 +34,46 @@ normalmente usa quando se quer fazer calculos, dados extensos,
 
 Forma de otimizar o código e deixa que o navegador separe nas threads
 
+PWA -> progress web application -> transforma as aplicação web em aplicação mobile
+
+aplicação web mas que parecem aplicações nativas no celular
+recursos no dispositivo
+
+tudo no navegador vai funcionar no celular
+construir para funcionar em diferentes plataformas
+
+possui menos custo de implementação
+design responsivo
+não possui robustez de um aplicativo nativo
+
+melhor performace possível criar um cpódigo nativo (a experiencia é melhor)
+caso contrário PWA (pois é muita mais rápida)
+cód hibrido faz em uma linguagem que funciona em outra plataformas
+
+cam intermediario entre o dispositivo e aplicação
+manifest - json que configura a aplicação
+precisa obrigatóriamente rodar em HTTPS
+icones fazem referencia a raiz do projeto (devem corresponder a determinada dimensão)
+'linkar' no HTML (pois ele usa esse arquivo de config)
+controles
+
+checar se existe um service worker aplicativo
+senão registrar (passa escopo /raiz do projeto)
+retorna uma promisse e cai no then snão no catch
+
+guarda em cache
+
+espera até 'cachear' as informações - passa o nome do cache e registra
+abriu o cache registrar tudo caso precise carregar a aplicação de forma offline
+
+é possível manda notificações usar API de notification
+pedir permissão (request permission que retorna uma promisse)
+assim, é possível enviar notificações
+new notification pode passar um texto e icones
+new notification que recebe uma string
+
+timeout tempo de execução de algo
+
+pode usar os mesmo recursos do navegador para um alicação nativa, possui uma aparencia de app nativo
+tem vantagem corporativa, pois tem toda funcionalidade do navegador
 
