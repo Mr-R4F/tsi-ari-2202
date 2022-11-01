@@ -1,0 +1,62 @@
+canvas elementos gráficos
+
+canvas
+
+getelement
+
+canvas geContext 2d - pos gráficos 2d serão criados encima disso
+necessário contexto para desenhar elementos gráficos na tela
+
+assim é possível sair desenhando
+moveto -move o cursor de desenho
+lineTo de uma até outra linha
+fill preenche o elemento
+
+criar retangulo -> usa fillstyle fillrect que recebe x e y
+fillStyle recebe string em RGB
+
+para circulo usa arc -> posição , diametro e completude
+
+desenhos mais complexos - vertices 
+necessário pontos estarem conectados
+declarar que vai começar a desenhar um caminho
+
+beginPath( ) -> seq de instruções para desenvolver um desenho
+closePath(0) -> finaliza o desenhostroke -> traça o caminho
+
+para desenhar texti 
+determinar a fonte 
+fillText() -> texto
+
+//criação de gráficos dinâmicos !
+//tela em branco onde é desenhado gráficos e usa js (pega o contexto)
+//assim é possível criar sites interativos
+
+p5 js/ phaser js (biblioteca que encapsula para permitir criar coisas mais complexas / gráficos interações jogos) 
+-> formas de criar coisas (encapsula e deixa mais fácil desenvolver o canvas)
+biblioteca -> conjunto de códigos prontos para realizar determinada tarefas
+
+é nativo, no mobile inclusive roda
+
+// necessário para 
+
+//usavel quando usar conviniente
+//o google só indexa coisa estáticas
+phaser js -> biblioteca para criação de jogos (2d) > é possivel colocar sprites
+dinamicos não
+linguagem a partir do js encapsulada
+interpolação de animação _escala conforme o tempo
+biblioteca -> utilizar webGL, canvas (usa electron para encapsular);
+canvas
+ 
+SVG -> é possivel praticamente 
+gráficos vetorizados (dinamicos que não são estáticos) faz na DOM (serve como imagem estatica mais é criado como dinamico)
+significa que ao reduzir ou não um icone não distorce pois é desenhado pelo praticamente
+usa xml -> só que os eu mesmo defino os elementos
+pode ser interpretado por pessoas cegas
+linguagem de marcação para definir
+necessário viewBox -> proporções (correlação de pixels na página)
+é possível criar outras formas a partir do SVG
+permite criar formas a partir de XML
+
+pode-se criar gradientes
