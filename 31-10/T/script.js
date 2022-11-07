@@ -9,11 +9,11 @@ img.onload = function() {
     CANVAS.onmousemove = function(e) {
         let coor = `${e.clientX} | ${e.clientY}`;
         document.querySelector('p').textContent = coor;
-       // console.log(coor);
+    console.log(coor);
         ctx.fillStyle = 'green';
         ctx.strokeStyle = '#000';
         ctx.beginPath();
-        ctx.moveTo(e.clientX, e.clientY);
+        ctx.moveTo(e.clientX, e.clientY)
         ctx.lineTo(e.clientX, e.clientY);
         ctx.closePath();
      
@@ -21,3 +21,6 @@ img.onload = function() {
         ctx.fill(); 
     }
 }
+
+
+
