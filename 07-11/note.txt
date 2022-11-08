@@ -1,0 +1,23 @@
+node js permite rodar um script sem a necessidade de um navegador
+node js -> framework que permite rodar js no servidor (se a necessidade de navegador) sendo possivel desenvolver aplicações back end (rodam no servidor
+
+permite rodar js no navegador
+
+criado v8 -> motor(que permite rodar código js de forma eficiente no chrome) o torna mais eficiente ( o que o tornou mais popular)
+extrair o motor do chorme para rodar no pc
+encapsula o V8 para rodar código js
+é um framework que possui o v8 nele
+vantagens -> é assicrono ( isto é conforme a requisião chega o trata de forma paralela)
+entender o NODE. JS 
+contraponto -> assincronidade dificil de trabalhar(muitos callbacks)
+**NODE.JS
+***importante no mercado, aplicações em node
+executar o arquivo -> na pasta do projeto -> node (nome-do-arquivo) / node teste.js
+é possível escrever arquivos
+
+consegue manupular js na máquina
+
+importa biblioteca no node -> require (nome-da-biblioteca)
+module.exports =>
+------
+no main especifica o arquivo de entrada
