@@ -78,4 +78,8 @@ para rodar o start npm run start / npm start para rodar uma aplicação node
 para electron usar electron. (inicializar uma aplicação a partir da raiz) (criar aplicações multiplataforma)
 criar HTML, e a partir da sintaxe criar uma janela no eletron para abrir uma janela como se fosse no navegador
 require no eletron
+
+//
+
+
 */

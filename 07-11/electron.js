@@ -23,4 +23,14 @@ app.whenReady.then(function() { //quando a aplicação estiver pronta (carregou 
 
 //tiver ok criar janela
 //improta eletron escuta ua função de ready e quando ti ver pronto criar janela padrão e criar aquv html
+//aplicação (electron) crtl + r (n recarrega)
+permite criar atalhos para as aplicações
+/*CRIAR EM ARQUIVO SEPArADO
+necessário electron build -> npm electron builder (criar aplicações para todas as plataformas) -> para gerar o executável
++ arquivos de config
+run e depois run dist -> só funcionar  se for dep de dev  (só roda no contexo de desenvolvedor)
+garantir tudo integro]
+excluir node
+trocar o package -> electron-builder e electron dentro das dependecies
+para mobile -> cordova (cria aplicação que por fim é uma web view que carrega aplicação HTML) 9gera aplicação tanto para ios e android
 */
