@@ -1,26 +1,63 @@
+const BTN_LINK = document.querySelector('a');
+const INPUT = document.querySelector('input');
 const CANVAS = document.querySelector('canvas');
+
 let ctx = CANVAS.getContext('2d');
 let img = document.createElement('img');
+let mouse = false;
+
 img.src = 'gato.jpg';
 
 img.onload = function() {
     ctx.drawImage(img, 50, 150, 300, 300);
+/*
+    CANVAS.onmousemove = function(e) {
+        coor = `${e.clientX} | ${e.clientY}`;
+        document.querySelector('p').textContent = coor;
+    }
+*/
+    CANVAS.onmousedown = function(e) {
+        ctx.beginPath();
+        ctx.moveTo(e.clientX, e.clientY);
+        mouse = true;
+    }
+
+    CANVAS.onmouseup = function() {
+        mouse = false;
+    }
 
     CANVAS.onmousemove = function(e) {
-        let coor = `${e.clientX} | ${e.clientY}`;
-        document.querySelector('p').textContent = coor;
-    console.log(coor);
+        if (!mouse) return;
+
+        ctx.lineTo(e.clientX, e.clientY);
         ctx.fillStyle = 'green';
         ctx.strokeStyle = '#000';
-        ctx.beginPath();
-        ctx.moveTo(e.clientX, e.clientY)
-        ctx.lineTo(e.clientX, e.clientY);
-        ctx.closePath();
-     
         ctx.stroke();
-        ctx.fill(); 
     }
 }
 
+//Insere imagem
+INPUT.onchange = function(e) {
+    const INPUT = e.target;
+    const READER = new FileReader();
 
+    READER.onload = function() {
+        const DATA_URL = READER.result;
+        img.src = DATA_URL;
+    }
+    READER.readAsDataURL(INPUT.files[0]);
+}
 
+//Donwload da imagem
+BTN_LINK.onclick = async function() {
+    const IMAGE = await fetch(img.src);
+    const IMAGE_BLOG = await IMAGE.blob();
+    const IMAGE_URL = URL.createObjectURL(IMAGE_BLOG);
+      
+    const LINK = document.createElement('a');
+    LINK.href = IMAGE_URL;
+    LINK.download = 'imagem';
+    document.body.appendChild(LINK);
+    LINK.click();
+    document.body.removeChild(LINK);
+}
