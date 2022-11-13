@@ -9,27 +9,25 @@ let mouse = false;
 img.src = 'gato.jpg';
 
 img.onload = function() {
-    ctx.drawImage(img, 50, 150, 300, 300);
-/*
-    CANVAS.onmousemove = function(e) {
-        coor = `${e.clientX} | ${e.clientY}`;
-        document.querySelector('p').textContent = coor;
-    }
-*/
+    ctx.drawImage(img, 50, 150, 200, 200);
+
+    ['mouseup', 'mouseout'].forEach(e => 
+        CANVAS.addEventListener(e, function() {
+            ctx.closePath();
+            mouse = false;
+        })
+    );
+
     CANVAS.onmousedown = function(e) {
         ctx.beginPath();
-        ctx.moveTo(e.clientX, e.clientY);
+        ctx.moveTo(e.clientX - (CANVAS.offsetLeft + scrollX), e.clientY - (CANVAS.offsetTop + scrollY));
         mouse = true;
-    }
-
-    CANVAS.onmouseup = function() {
-        mouse = false;
     }
 
     CANVAS.onmousemove = function(e) {
         if (!mouse) return;
 
-        ctx.lineTo(e.clientX, e.clientY);
+        ctx.lineTo(e.clientX - (CANVAS.offsetLeft + scrollX), e.clientY - (CANVAS.offsetTop + scrollY));
         ctx.fillStyle = 'green';
         ctx.strokeStyle = '#000';
         ctx.stroke();
