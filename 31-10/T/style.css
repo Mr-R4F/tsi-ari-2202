@@ -1,0 +1,40 @@
+/*
+:root {
+    --center: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: var(--center);
+    flex-direction: column;
+}
+
+canvas, #painel {
+    position: relative;
+}
+
+canvas {
+    bottom: 1.8rem;
+    right: 30.03rem;
+    border-bottom-left-radius: 33px;
+    border-bottom-right-radius: 33px;
+    z-index: 1;
+}
+
+#painel {
+    top: 7.5rem;
+    right: 12.4rem;
+    height: 71px;
+    width: 395px;
+    background-color: #9c9c9cda;
+    border-top-left-radius: 33px;
+    border-top-right-radius: 33px;
+    z-index: -1;
+}
+*/

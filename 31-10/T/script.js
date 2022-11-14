@@ -1,8 +1,16 @@
-const BTN_LINK = document.querySelector('a');
-const INPUT = document.querySelector('input');
-const CANVAS = document.querySelector('canvas');
+const CANVAS = new Array(
+    document.querySelectorAll('canvas')[0],
+    document.querySelectorAll('canvas')[1]
+);
+const BTN_LINK = document.getElementById('download');
+const INPUT = document.getElementById('file');
+const VIDEO = document.getElementById('webcam');
+const WEBCAM = new Webcam(VIDEO, 'user', CANVAS[1]);
 
-let ctx = CANVAS.getContext('2d');
+const BTN = document.getElementById('btn');
+const REMOVE = document.getElementById('download-picture');
+
+let ctx = CANVAS[1].getContext('2d');
 let img = document.createElement('img');
 let mouse = false;
 
@@ -12,22 +20,22 @@ img.onload = function() {
     ctx.drawImage(img, 50, 150, 200, 200);
 
     ['mouseup', 'mouseout'].forEach(e => 
-        CANVAS.addEventListener(e, function() {
+        CANVAS[1].addEventListener(e, function() {
             ctx.closePath();
             mouse = false;
         })
     );
 
-    CANVAS.onmousedown = function(e) {
+    CANVAS[1].onmousedown = function(e) {
         ctx.beginPath();
-        ctx.moveTo(e.clientX - (CANVAS.offsetLeft + scrollX), e.clientY - (CANVAS.offsetTop + scrollY));
+        ctx.moveTo(e.clientX - (CANVAS[1].offsetLeft + scrollX), e.clientY - (CANVAS[1].offsetTop + scrollY));
         mouse = true;
     }
 
-    CANVAS.onmousemove = function(e) {
+    CANVAS[1].onmousemove = function(e) {
         if (!mouse) return;
 
-        ctx.lineTo(e.clientX - (CANVAS.offsetLeft + scrollX), e.clientY - (CANVAS.offsetTop + scrollY));
+        ctx.lineTo(e.clientX - (CANVAS[1].offsetLeft + scrollX), e.clientY - (CANVAS[1].offsetTop + scrollY));
         ctx.fillStyle = 'green';
         ctx.strokeStyle = '#000';
         ctx.stroke();
@@ -47,15 +55,27 @@ INPUT.onchange = function(e) {
 }
 
 //Donwload da imagem
-BTN_LINK.onclick = async function() {
-    const IMAGE = await fetch(img.src);
-    const IMAGE_BLOG = await IMAGE.blob();
-    const IMAGE_URL = URL.createObjectURL(IMAGE_BLOG);
-      
+BTN_LINK.onclick = function() {
     const LINK = document.createElement('a');
-    LINK.href = IMAGE_URL;
+    LINK.href = CANVAS[1].toDataURL();
     LINK.download = 'imagem';
     document.body.appendChild(LINK);
     LINK.click();
     document.body.removeChild(LINK);
+}
+
+//Web cam
+BTN.onclick = function() {
+    WEBCAM.start()
+    .then(result => {
+        console.log('Webcam iniciada');
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+REMOVE.onclick = function() {
+    const PICTURE = WEBCAM.snap();
+    img.src = PICTURE;
 }
