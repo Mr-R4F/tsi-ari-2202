@@ -1,6 +1,9 @@
-/*
 :root {
     --center: center;
+}
+
+body {
+    overflow: hidden ;
 }
 
 * {
@@ -12,29 +15,71 @@
 .container {
     display: flex;
     align-items: var(--center);
+    justify-content: var(--center);
     flex-direction: column;
+    margin-top: -3rem;
+    margin-left: 20rem;
 }
 
 canvas, #painel {
     position: relative;
 }
 
-canvas {
+#screen-bottom canvas {
     bottom: 1.8rem;
     right: 30.03rem;
     border-bottom-left-radius: 33px;
     border-bottom-right-radius: 33px;
+    border: 1px solid;
     z-index: 1;
 }
 
 #painel {
-    top: 7.5rem;
+    top: 6.2rem;
     right: 12.4rem;
     height: 71px;
     width: 395px;
     background-color: #9c9c9cda;
     border-top-left-radius: 33px;
     border-top-right-radius: 33px;
-    z-index: -1;
 }
-*/
+
+input[type='file'] {
+    width: 120px;
+}
+
+#painel-items {
+    position: relative;
+    left: 20rem;
+    bottom: 12.5rem;
+    display: flex;
+    justify-content: var(--center);
+    align-items: var(--center);
+}
+
+#painel-items .col {
+    padding: 0 .1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, button {
+    display: flex;
+    cursor: pointer;
+    color: #000;
+    border: 1px solid;
+    border-radius: 35px;
+    padding: .5rem 1.2rem;
+}
+
+#getImg {
+    display: none;
+}
+
+video {
+    position: relative;
+    left: 10rem;
+    top: 8rem;
+}
