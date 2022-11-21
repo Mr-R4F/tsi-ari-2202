@@ -1,0 +1,141 @@
+REVISÃO APENAS
+
+css3 
+
+seletores complexos -> possibilidade de selecionar elementos por outrar caracteristicas
+
+possível de selecionar por atributos
+por inputs
+possivel de selecionar a partir de uma condição
+por pseudo seletores
+
+root -> elemento raiz (para elementos principais)
+elemento especifico -> nthchld( seleciona uma elemento filho a partir de uma ordem)
+psuedo seletor ::
+
+é one base
+
+por filho direto (>)
+(+) irmãos diretos
+
+gradientes e passa parametros
+
+transform -> manipula a forma de como o elemento aparecerá na tela (aparencia)
+propriedade que aceita como propriedade funções (que fazer algo)
+
+scale -> recebe valor proporcional (modifica a dimensão do elemento)
+skew -> modifica ângulos (distorce)
+translate -> move elemento pela tela x e y
+rotate -> gira o elemento em graus
+
+-> útil para animações
+
+transition -> criar transição animada entre estados de um elemento (aniação de uma mudança de propriedade para outra)
+animação da mudança da propriedade de elementos a partir de um elemento
+criar estados animadas a partir desses estados em segundos
+
+animation -> é possível criar animações
+
+@keyframes -> quadros chaves de uma animação
+especificar quadros e dá um nome 
+especifica em % ou from / to (para dois estados)
+@media query -> cria css condição (a partir de diferentees atributos do dispostivo que está usando)
+min-width (de / pelo menos)
+max-width(até)
+
+flexbox -> permite criar design responsivo de forma mais fácil
+no pai e todos os filhos 'herdam' o flexbox
+flebox box sempre controla os filhos de um pai (container, elemento que possui filho) (elementos ficam um do lado do outro)
+manipular elementos de uma forma fácil
+criar / manipular elementos css
+
+Geolocation
+
+api que permite pegar dados da localização
+
+utilizad o objeto geolocation do navigator (possui dados do navegador) (permite acessar a API)
+getCurrentPosition() -> pega a posiçao atual (do momento atual) (aceita funções como argumentos (callbacks))
+watchPosition() -> assiste a posição (e se mudou dispara um evento)
+
+são assincronos (necessário trabalhar com callbacks)
+(sucesso, erro e geolocation (opções))
+aceita 3 parametros
+
+canvas (tela em branco)
+
+-> permite criar gráficos no JS
+cria gráficos dinâmicos (gráficos que por instruções deve ser criado pela máquina)
+primeiro declarar e depois colocar funções
+
+selecionar e criar contexto (depende) ->possui contexto 2d (padrão) e 3d (como o desenho deve ser feito)
+assim é possível desenhar
+
+utiliza funções que determinam o que se quer fazer no canvas
+
+moveTo(() -> (começa no 0,0) -> define um ponto em X e Y para mover o cursor
+lineTo) -> que recebe o X e Y e define aonde se quer criar uma linha (forma a linha da posição atual até outra)
+fill() -> preenche uma forma (fechada)
+fillStyle -> recebe um cor de preenchimento
+
+ou fillRect() (desenha retangulo) -> que recebe x , y , lar, e alt
+
+SVG
+
+para desenhar formas diferentes 
+
+feita pra criar gráficos vetoriais (são estáticos) (gráficos dinamicos criados no navegador e possível de manipulação e sem perder resolução (pois é estática))
+linguagem de marcação
+
+viewBox -> = ao canvas
+determina x e y largura e altura da svg e vai declarando parametros que cria desenhos
+
+incluir no img (caso quiser criar)
+
+History -> api de historico
+
+permite avançar e voltar os estados da aplicação desde que tenham sido salvos
+volta para partes da página mais sem voltar para uma página anterior e sim para partes da página
+
+salvar estados da aplicação conforme a navegação
+
+e para voltar usa-se o estados do da window
+necessário guardar os estados -> pushstate()(guarda o estado atual) (como se fosse uma pilha ( e adiciona um item na pilha))
+
+back - volta  um estado da aplicação
+forward -> avança um estado da pilha
+go -> um numero de estados para avança
+
+empilhando estados e transitando entre elementos
+permite guardar estados e permite com que avança e retorne para estados anteriores da aplicação
+exmp GMAIL
+
+pushstate() recebe parametros 
+objetos de estados
+
+e para obter um estado da aplicação usar o window.history.state -> que diz o estado atual da aplicação
+
+web workers -> aplicações complexas que demanda processamento e faz com que a aplicação crashe (trave os elementos e a interação)  pro isso surge os web workes que trabalham em threads
+
+thread contexto de execução de tarefas (permite trabalhar de forma paralela o código) (para tarefas complexas) (jogar numa thread paralela)
+assim web workers permite que se use thread para executar tarefas complexas
+
+e para criar
+
+usar a sintaxe new worker e passar um caminho de um script (pois o web worker deve estar num arquivo separado)
+
+mas para escutar quando terminou ou mandar mensagens, (pois toda página emite e manda mensagems)
+
+postmessage para enviar a menssagem
+armazenar numa variável e escutar as mensagens do worker -> onmessage (toda vez que o worker mandar uma mensagem)
+
+passar o script para ser executado em outra thread da aplicação
+
+executar código em paralelo
+
+e para saber se terminou mandar postmessage
+
+SEO só olha o cod o html
+código dinâmico na é implementado pela google
+
+é apenas para perforace (codígos complexos)
+
