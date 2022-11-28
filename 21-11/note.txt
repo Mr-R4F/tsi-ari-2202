@@ -30,7 +30,7 @@ rotate -> gira o elemento em graus
 
 -> útil para animações
 
-transition -> criar transição animada entre estados de um elemento (aniação de uma mudança de propriedade para outra)
+transition -> criar transição animada entre estados de um elemento (animação de uma mudança de propriedade para outra)
 animação da mudança da propriedade de elementos a partir de um elemento
 criar estados animadas a partir desses estados em segundos
 
@@ -39,7 +39,7 @@ animation -> é possível criar animações
 @keyframes -> quadros chaves de uma animação
 especificar quadros e dá um nome 
 especifica em % ou from / to (para dois estados)
-@media query -> cria css condição (a partir de diferentees atributos do dispostivo que está usando)
+@media query -> cria css condição (a partir de diferentes atributos do dispostivo que está usando)
 min-width (de / pelo menos)
 max-width(até)
 

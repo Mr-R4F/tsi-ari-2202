@@ -1,0 +1,60 @@
+/* input[type="text"] {
+    height: 100px;
+    font-size: xx-large;
+}
+
+:root {
+    background-color: azure;
+}
+
+#lista > li:nth-child(3) {
+    background-color: red;
+    font-size: larger;
+}
+
+#lista > li {
+    background-color: yellow;
+}
+
+
+div + ul {
+    background-color: blue;
+}
+
+#box1 {
+    position: relative;
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    transform: scale(2) rotate(45deg);
+    animation: box 3s infinite;
+}
+
+@keyframes box {
+    from {
+        left: 0%;
+    }
+    to {
+       left: 100%;
+    }
+}
+.container:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container:nth-child(3) div {
+    background-color: #000;
+    color: #fff;
+    font-size: x-large;
+    width: 200px;
+    height: 200px;
+}
+
+@media screen and (max-width: 992px) {
+    .container:nth-child(3) {
+        flex-direction: column;
+        align-items: center;
+    }
+} */
+

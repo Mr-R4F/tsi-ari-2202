@@ -29,6 +29,7 @@ function avancar() {
 window.onpopstate = (e) => { //toda vez que o histórico foi modificada CAI AQUI
     document.getElementById('mensagem').innerHTML = e.state.n + 'click(s)';  //assim garante QUE O HISTORY FOI MODIFICADO
 }
+
 function voltar() {
     window.history.go(-1);
     document.getElementById('mensagem').innerHTML = window.history.state.n + 'cliques'; //obtém o estado atual
